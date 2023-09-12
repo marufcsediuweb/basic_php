@@ -2,7 +2,6 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    if(isset($_POST['submit']) ) {
         // Receive form data and assign to variables
         $subjectOne = $_POST['numOne'];
         $subjectTwo = $_POST['numTwo'];
@@ -28,10 +27,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "";
             }
         }
-
-    } else {
-        echo "Enter All The Required Fields and Calculate Again";
-    }
 } 
 
 ?>
