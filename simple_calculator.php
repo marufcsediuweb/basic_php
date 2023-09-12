@@ -1,4 +1,26 @@
 <?php
+// Checking the Form request method Get/Post
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $numOne = $_POST['numOne'];
+    $numTwo = $_POST['numTwo'];
+    $operationType = $_POST['operationType'];
+
+    if($operationType == "addi"){
+        $result = $numOne + $numTwo;
+        echo "Output: " . $result;
+    } else if($operationType == "subt"){
+        $result = $numOne - $numTwo;
+        echo "Output: " . $result;
+    } else if($operationType == "mult"){
+        $result = $numOne * $numTwo;
+        echo "Output: " . $result;
+    } else if($operationType == "divi"){
+        $result = $numOne / $numTwo;
+        echo "Output: " . $result;
+    } else {
+        echo "Operation not found.";
+    }
+}
 ?>
 
 <!DOCTYPE html>
